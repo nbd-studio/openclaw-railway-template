@@ -2,7 +2,7 @@ FROM node:22-bookworm
 
 # Install ffmpeg and whisper for voice transcription
 RUN apt-get update && apt-get install -y ffmpeg python3 python3-pip && rm -rf /var/lib/apt/lists/*
-RUN pip3 install openai-whisper --break-system-packages
+RUN pip3 install faster-whisper --break-system-packages
 
 
 RUN apt-get update \
